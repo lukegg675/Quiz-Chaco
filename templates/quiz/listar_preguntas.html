@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block título %}Juego{% endblock %}
+{% block body %}
+    <div class="row justify-content-md-center">
+    <div class="col col-lg-6">
+    <h1 class="display-1"><p class="text-start">JUEGO DE PREGUNTAS CHAQUEÑAS.</p></h1>
+     <form method="POST">
+    {% csrf_token %}
+        {% for key, value in data.items %}
+            {{ key }} {{value.categoria}}<br>
+            <select name="{{forloop.counter}}">
+                {% for opcion in value.opciones %}
+                  <option value="{{opcion.id}}">{{ opcion.opcion }}</option>
+                {% endfor %}
+            </select>
+        <br><br>
+    {% endfor %}
+          <a class="btn btn-outline-dark" href="/" role="button">Enviar</a>
+    </form>
+{% endblock %}
+

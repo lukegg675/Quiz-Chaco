@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block título %}70_AÑOS{% endblock %}
+{% block body %}
+<h1 class="display-1"><p class="text-start">JUEGO DE PREGUNTAS CHAQUEÑAS.</p></h1>
+<h1 class="display-5"><p class="text-success">Por los 70 años de Provincialización de nuestra provincia</p>
+</h1>
+<div class="card">
+  <div class="card-header">
+    <p class="text-white bg-dark">PARA JUGAR AL JUEGO</p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><p class="text-danger">INICIA SESIÓN</p></h5>
+    <p class="card-text">Clickea en jugar y inicia sesión(en caso de no haber iniciado)</p>
+  <a class="btn btn-outline-dark" href="/quiz" role="button">JUGAR</a>
+  </div>
+  <br>
+  <a class="btn btn-outline-success" href="/resultado" role="button">Resultados</a>
+</div>
+{% endblock %}
